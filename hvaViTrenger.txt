@@ -1,0 +1,6 @@
+[] Model  -- Lage sammen
+[] {MARCUS} Liste med sorterings funksjoner( produsent, plastikk,) 
+[] {Linn} Diskprofilen(Metadata, bilde, rating)
+[] {Michael} Kommentarfelt(skrive og lagre kommentarer)
+[] Egen kategori - "in my bag"? -- nice to have
+[] Darkmode? -- nice to have
