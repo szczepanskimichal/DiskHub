@@ -1,0 +1,88 @@
+.sorted-disc-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    align-items: flex-start; 
+}
+
+.sorted-disc-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1976d2;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+
+.sorted-disc-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.sorted-disc-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    max-width: 480px; 
+    justify-items: start;
+    user-select: none;
+    cursor:pointer;
+}
+
+.sorted-disc-list > div {
+    background: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1rem 1.5rem;
+    min-width: 180px;
+    max-width: 220px;
+    margin: 0;
+    transition: box-shadow 0.2s;
+}
+
+.sorted-disc-list > div:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    background: #e6f7ff;
+}
+
+.sorted-disc-list p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+button {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    margin: 0.2rem 0.3rem 0.7rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(25, 118, 210, 0.08);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+button:hover,
+button:focus {
+    background: #1565c0;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.18);
+    transform: translateY(-2px) scale(1.03);
+    outline: none;
+}
+
+.selected-category {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #0056b3;
+}

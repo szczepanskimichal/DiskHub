@@ -1,0 +1,64 @@
+        img {
+            width: 200px;
+            height: auto;
+        }
+        span {
+            font-weight: bold;
+        }
+        .disc-profile {
+            position: relative;
+            z-index: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        /* noe overkill CSS bare på gøy FANCYPANTS ENGAGE!*/
+        .disc-profile::before {
+            content: "";
+            position: absolute; 
+            inset: 0;
+            background: linear-gradient(30deg, #ff6b6b, #ffbb66, #70d6ff, #8f94fb);
+            background-size: 300% 300%;
+            z-index: -1;
+            filter: blur(8px);
+            border-radius: 18px;
+            animation: glow 6s ease infinite;
+        }
+        @keyframes glow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .button{
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(45deg, #ff6b6b, #ffd36b);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+            background: linear-gradient(45deg, #ffd36b, #ff6b6b);
+        }
+
+        button::before {
+            content: "";
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, #ff6b6b, #ffd36b, #70d6ff, #8f94fb);
+            background-size: 400% 400%;
+            border-radius: 52px;
+            z-index: -1;
+            animation: glow 3s ease infinite;
+}

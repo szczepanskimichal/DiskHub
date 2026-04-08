@@ -1,8 +1,9 @@
 const model = {
     app: {
-        app: document.getElementById("app"),
+        app: document.getElementById('app'),
         currentPage: "",
-        darkMode = true
+        darkMode: true,
+        selectedDiskIndex: 0,
     },
     input: {
         selectedCategory: "",
@@ -10,15 +11,20 @@ const model = {
     data: {
         disks: [
             {
+                id: 1,
                 name: "Proto disk",
                 producer: "stiga",
                 flightnumber: 5,
                 color: "green",
                 weight_in_grams: 200,
                 img: 'https://store.discgolf.com/cdn/shop/files/proline-hellfire-red-fairway-driver.jpg',
-                inmybag: true
+                inmybag: false,
+                comments: [
+
+                ]
             },
             {
+                id: 2,
                 name: "Gammel frisbee",
                 producer: "Lekebutikken",
                 flightnumber: 2,
@@ -26,17 +32,23 @@ const model = {
                 weight_in_grams: 200,
                 img: 'https://store.discgolf.com/cdn/shop/files/proline-hellfire-red-fairway-driver.jpg',
                 inmybag: false,
+                comments: []
+
             },
             {
+                id: 3,
                 name: "Power Driver",
                 producer: "DiscPro",
                 flightnumber: 13,
                 color: "red",
                 weight_in_grams: 174,
                 img: 'https://store.discgolf.com/cdn/shop/files/proline-hellfire-red-fairway-driver.jpg',
-                inmybag: true,
+                inmybag: false,
+                comments: []
+
             },
             {
+                id: 4,
                 name: "Control Driver",
                 producer: "FlyHigh",
                 flightnumber: 9,
@@ -44,6 +56,8 @@ const model = {
                 weight_in_grams: 176,
                 img: 'https://store.discgolf.com/cdn/shop/files/proline-hellfire-red-fairway-driver.jpg',
                 inmybag: false,
+                comments: []
+
             },
             {
                 name: "Fairway Glide",
@@ -52,7 +66,9 @@ const model = {
                 color: "yellow",
                 weight_in_grams: 172,
                 img: 'https://store.discgolf.com/cdn/shop/files/proline-hellfire-red-fairway-driver.jpg',
-                inmybag: true,
+                inmybag: false,
+                comments: []
+
             },
             {
                 name: "Stable Mid",
@@ -62,6 +78,7 @@ const model = {
                 weight_in_grams: 180,
                 img: 'https://store.discgolf.com/cdn/shop/files/proline-hellfire-red-fairway-driver.jpg',
                 inmybag: false,
+                comments: []
             },
             {
                 name: "Understable Mid",
@@ -70,7 +87,8 @@ const model = {
                 color: "purple",
                 weight_in_grams: 177,
                 img: 'https://store.discgolf.com/cdn/shop/files/proline-hellfire-red-fairway-driver.jpg',
-                inmybag: true,
+                inmybag: false,
+                comments: []
             },
             {
                 name: "Classic Putter",
@@ -79,7 +97,11 @@ const model = {
                 color: "white",
                 weight_in_grams: 173,
                 img: 'https://store.discgolf.com/cdn/shop/files/proline-hellfire-red-fairway-driver.jpg',
-                inmybag: true,
+                inmybag: false,
+                comments: [
+
+                ]
+
             },
             {
                 name: "Soft Touch Putter",
@@ -89,6 +111,8 @@ const model = {
                 weight_in_grams: 171,
                 img: 'https://store.discgolf.com/cdn/shop/files/proline-hellfire-red-fairway-driver.jpg',
                 inmybag: false,
+                comments: []
+
             },
             {
                 name: "Wind Fighter",
@@ -97,7 +121,9 @@ const model = {
                 color: "orange",
                 weight_in_grams: 178,
                 img: 'https://store.discgolf.com/cdn/shop/files/proline-hellfire-red-fairway-driver.jpg',
-                inmybag: true,
+                inmybag: false,
+                comments: []
+
             },
             {
                 name: "Distance King",
@@ -107,6 +133,8 @@ const model = {
                 weight_in_grams: 169,
                 img: 'https://store.discgolf.com/cdn/shop/files/proline-hellfire-red-fairway-driver.jpg',
                 inmybag: false,
+                comments: []
+
             },
             {
                 name: "Glow Fairway",
@@ -115,9 +143,12 @@ const model = {
                 color: "glow",
                 weight_in_grams: 175,
                 img: 'https://store.discgolf.com/cdn/shop/files/proline-hellfire-red-fairway-driver.jpg',
-                inmybag: true,
+                inmybag: false,
+                comments: []
+
             }
         ],
-    },
+        sortedDisks: []
+    }
 
-}
+};
