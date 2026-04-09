@@ -8,13 +8,13 @@ function showInMyBag() {
     updateView();
 }
 
-function toggleBag(id) {
-    let disk = model.data.disks.find(d => d.id === id);
+function toggleBag(diskIndex) {
+    let disk = model.data.disks[diskIndex];
     disk.inmybag = !disk.inmybag;
     updateView();
 }
 
-function createDiskCard(disk) {
+function createDiskCard(disk, diskIndex) {
     return /*HTML*/`
         <div class="card">
             <img src="${disk.img}" width="150"/>
@@ -23,7 +23,7 @@ function createDiskCard(disk) {
             <p>Flight: ${disk.flightnumber}</p>
             <p>Farge: ${disk.color}</p>
             <p>Vekt: ${disk.weight_in_grams}g</p>
-            <button onclick="toggleBag('${disk.name}')">
+            <button onclick="toggleBag(${diskIndex})">
                 ${disk.inmybag ? "Fjern fra bag" : "Legg i bag"}
             </button>
         </div>

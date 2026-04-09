@@ -11,7 +11,6 @@ const model = {
     data: {
         disks: [
             {
-                id: 1,
                 name: "Proto disk",
                 producer: "stiga",
                 flightnumber: 5,
@@ -24,7 +23,6 @@ const model = {
                 ]
             },
             {
-                id: 2,
                 name: "Gammel frisbee",
                 producer: "Lekebutikken",
                 flightnumber: 2,
@@ -36,7 +34,6 @@ const model = {
 
             },
             {
-                id: 3,
                 name: "Power Driver",
                 producer: "DiscPro",
                 flightnumber: 13,
@@ -48,7 +45,6 @@ const model = {
 
             },
             {
-                id: 4,
                 name: "Control Driver",
                 producer: "FlyHigh",
                 flightnumber: 9,

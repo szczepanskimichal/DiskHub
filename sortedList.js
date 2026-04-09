@@ -29,10 +29,12 @@ function showSortedList() {
     }
 
     for (let i = 0; i < diskList.length; i++) {
+        const disk = diskList[i];
+        const originalIndex = model.data.disks.indexOf(disk);
         html += /*html*/`
-            <div onclick="showDisk(${i})">
-                <p>${diskList[i].name}
-                ${(model.input.selectedCategory && model.input.selectedCategory !== "bag") ? `- ${diskList[i][model.input.selectedCategory]}` : ""}
+            <div onclick="showDisk(${originalIndex})">
+                <p>${disk.name}
+                ${(model.input.selectedCategory && model.input.selectedCategory !== "bag") ? `- ${disk[model.input.selectedCategory]}` : ""}
                 </p>
             </div>
         `
@@ -52,10 +54,10 @@ function sortDisks(category) {
     let valueType = typeof allDisks[0][category];
 
     if (valueType === "string") {
-        model.data.sortedDisks = allDisks.sort((a, b) => a[category].localeCompare(b[category]));
+        model.data.sortedDisks = [...allDisks].sort((a, b) => a[category].localeCompare(b[category])); 
     }
     else if (valueType === "number" || valueType === "boolean") {
-        model.data.sortedDisks = allDisks.sort((a, b) => a[category] - b[category]);
+        model.data.sortedDisks = [...allDisks].sort((a, b) => a[category] - b[category]);
     }
     else {
         console.error("Invalid category type for sorting");
